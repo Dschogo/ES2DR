@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "EStDR",
+    "version": "0.0.1b1",
+    "description": "EStDR - Epidemic Sound to Davinci Resolve",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://epidemicsound.com/*"],
+            "js": ["page-eater.js"]
+        }
+    ],
+    "icons": {
+        "16": "icons/icon16.png"
+    },
+    "browser_action": {
+        "default_icon": "icons/icon16.png"
+    },
+    "permissions": ["tabs", "storage", "activeTab", "contextMenus"],
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "addon@example.com",
+          "strict_min_version": "42.0"
+        }
+      }
+      
+}
