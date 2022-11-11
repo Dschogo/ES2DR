@@ -1,2 +1,3 @@
 Extension/web-ext-artifacts/*
 server/__pycache__/*
+server/server.zip

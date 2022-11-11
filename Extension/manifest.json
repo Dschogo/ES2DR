@@ -22,8 +22,8 @@
     "permissions": ["tabs", "storage", "activeTab", "contextMenus"],
     "browser_specific_settings": {
         "gecko": {
-            "update_url": "https://raw.githubusercontent.com/Dschogo/EStDR/master/update.json"
+            "update_url": "https://raw.githubusercontent.com/Dschogo/EStDR/master/update.json",
+            "strict_min_version": "102.0"
         }
-      }
-      
+    }
 }
