@@ -1,13 +1,30 @@
-let iter = document.getElementsByClassName("ReactVirtualized__Grid__innerScrollContainer")[0];
+var iter = document.getElementsByClassName("ReactVirtualized__Grid__innerScrollContainer")[0];
 
-
-let result = [];
-for (i = 0; i < iter.children.length; i++) {
-    result.push(searchTree(iter.children[i]));
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+async function main() {
+    var result = [];
+    window.scrollTo(0, 0);
+    await sleep(100);
+    for (var j = 0; j < 10000; j++) {
+        if (window.scrollY == window.scrollMaxY ) {
+            break
+        }
+        for (i = 0; i < iter.children.length; i++) {
+            result.push(searchTree(iter.children[i]));
+        }
+        window.scrollBy(0, 100);
+        await sleep(50);
+    };
+    browser.runtime.sendMessage(result.filter(function(item, pos) {
+        return result.indexOf(item) == pos;
+    }));
+}
+main();
 
-browser.runtime.sendMessage(result);
+
 function searchTree(element) {
     if (element?.href?.startsWith("https://www.epidemicsound.com/track/")) {
         return element.href;

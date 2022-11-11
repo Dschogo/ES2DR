@@ -92,14 +92,14 @@ async def handler(websocket):
             print(f'Downloaded {track["title"]}')
             mediaPool.ImportMedia([f'''{audiopath}{track["title"]}.mp3'''])
         if message["action"] == 'playlist-download':
-            for x in message["urls"]:
-                track = requests.get(x.replace("/track", "/json/track")[:-1]).json()
+            for x in range(0, len(message["urls"])):
+                track = requests.get(message["urls"][x].replace("/track", "/json/track")[:-1]).json()
                 r = requests.get(track['stems']['full']['lqMp3Url'])
                 for char in invalid:
                     track["title"] = track["title"].replace(char, '')
                 with open(f'{audiopath}{track["title"]}.mp3', 'wb') as fb:
                     fb.write(r.content)
-                print(f'Downloaded {track["title"]}')
+                print(f'{x+1} / {len(message["urls"])} Downloaded {track["title"]}')
                 mediaPool.ImportMedia([f'''{audiopath}{track["title"]}.mp3'''])
 
 

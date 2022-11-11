@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "EStDR",
-    "version": "0.0.1b1",
+    "version": "0.0.1b2",
     "description": "EStDR - Epidemic Sound to Davinci Resolve",
     "background": {
         "scripts": ["background.js"],
