@@ -1,3 +1,3 @@
-Epidemic Sound to Davinci Resolve Firefox Extension
+# Epidemic Sound to Davinci Resolve Firefox Extension
 
-Docs over here: [CLICK ME](https://dschogo.github.io/HowToStuff/)
+Docs over here: [CLICK ME](https://dschogo.github.io/HowToStuff/Other/EStDR/)
