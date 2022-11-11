@@ -74,3 +74,16 @@ browser.browserAction.onClicked.addListener((tab) => {
 
     console.log(tab.url);
 });
+
+
+browser.contextMenus.create({
+    id: "copy-link-to-davinci",
+    title: "Import this track to DaVinci Resolve",
+    contexts: ["link"],
+});
+
+browser.contextMenus.onClicked.addListener((info, tab) => {
+    if (info.menuItemId === "copy-link-to-davinci" && info.linkUrl.startsWith("https://www.epidemicsound.com/track/")) {
+        websocket_my.send(JSON.stringify({ action: "track-download", url: info.linkUrl }));
+    }
+});

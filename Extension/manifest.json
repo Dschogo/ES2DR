@@ -1,11 +1,15 @@
 {
     "manifest_version": 2,
     "name": "EStDR",
-    "version": "0.0.1b2",
+    "version": "0.0.1b3",
     "description": "EStDR - Epidemic Sound to Davinci Resolve",
     "background": {
         "scripts": ["background.js"],
         "persistent": true
+    },
+    "developer": {
+        "name": "Dschogo",
+        "url": "https://github.com/Dschogo/EStDR"
     },
     "content_scripts": [
         {
