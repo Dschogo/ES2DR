@@ -4,7 +4,7 @@ This is a Firefox extension that allows you to download/import music from Epidem
 
 ## Installation
 
-Docs over here: [CLICK ME](https://dschogo.github.io/HowToStuff/Other/ES2DR/)
+Docs over here: [CLICK ME](https://dschogo.github.io/HowToStuff/Davinci%20Resolve/ES2DR/)
 
 ## How does it work internally?
 
